@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mwazisi Consulting: IT consultancy and managed services in Lusaka, Zambia.">
+<title>Mwazisi Consulting</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 5 90 90'%3E%3Crect x='5' y='5' width='90' height='90' fill='%23bde4f4'/%3E%3Cg fill='%23ff7f50'%3E%3Cpath d='M50,10H10v40c0,22.09,17.91,40,40,40h40V50C90,27.91,72.09,10,50,10z M83.333,83.333H50c-18.379,0-33.333-14.954-33.333-33.333V16.667H50c18.379,0,33.333,14.955,33.333,33.333V83.333z'/%3E%3Cpath d='M50,23.333c-14.727,0-26.667,11.94-26.667,26.667S35.273,76.667,50,76.667S76.667,64.727,76.667,50S64.727,23.333,50,23.333z M50,70c-11.048,0-20-8.955-20-20s8.952-20,20-20c11.045,0,20,8.955,20,20S61.045,70,50,70z'/%3E%3Cpath d='M50,36.667c-7.363,0-13.333,5.97-13.333,13.333S42.637,63.333,50,63.333S63.333,57.363,63.333,50S57.363,36.667,50,36.667z M50,56.667c-3.682,0-6.667-2.985-6.667-6.667s2.985-6.667,6.667-6.667s6.667,2.985,6.667,6.667S53.682,56.667,50,56.667z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: wide editorial hero with an illustrative service-status panel, then a services grid, a true four-step process, credentials, and a contact band. */
+:root{
+  --bg:#F5F6F7; --surface:#FFFFFF; --fg:#14181F; --muted:#586070; --line:#DCE0E5;
+  --accent:#E87722; --accent-ink:#1A0E03; --accent-text:#B24F0B; --accent-soft:#FDEBDB;
+  --ok:#1E7A4C; --ok-soft:#DDF1E6; --warn:#9A5B00; --warn-soft:#FBEBCB;
+  --band:#14181F; --band-fg:#F1F3F5; --band-muted:#A7AFBB;
+  --font-display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;
+  --font-body:'IBM Plex Sans','Segoe UI',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1318; --surface:#171C23; --fg:#ECEEF1; --muted:#9BA4B1; --line:#2A313B;
+  --accent:#F08A3A; --accent-ink:#1A0E03; --accent-text:#F59A52; --accent-soft:#2B1B0E;
+  --ok:#5FD08F; --ok-soft:#12291D; --warn:#F2B84B; --warn-soft:#2E230C;
+  --band:#0A0D11; --band-fg:#F1F3F5; --band-muted:#8F98A5; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0F1318; --surface:#171C23; --fg:#ECEEF1; --muted:#9BA4B1; --line:#2A313B;
+  --accent:#F08A3A; --accent-ink:#1A0E03; --accent-text:#F59A52; --accent-soft:#2B1B0E;
+  --ok:#5FD08F; --ok-soft:#12291D; --warn:#F2B84B; --warn-soft:#2E230C;
+  --band:#0A0D11; --band-fg:#F1F3F5; --band-muted:#8F98A5; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--font-body);
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1120px;margin:0 auto}
+h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.1;letter-spacing:-.02em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.eyebrow{font:500 12px/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text)}
+
+/* nav */
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:20px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font:800 20px/1 var(--font-display);letter-spacing:-.02em;text-decoration:none}
+.logo{height:40px;width:auto;display:block;color:var(--fg)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
+nav ul a:hover{color:var(--fg)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:56px 72px}
+.hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;margin-top:18px}
+.hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--accent) 62%,var(--accent) 92%,transparent 92%)}
+.hero .lede{margin-top:22px;font-size:18px;color:var(--muted);max-width:52ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--fg)}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.primary:hover{filter:brightness(1.06)}
+.btn.ghost:hover{background:var(--surface)}
+.facts{display:flex;gap:28px;flex-wrap:wrap;margin-top:34px;padding-top:22px;border-top:1px solid var(--line);font:400 13px/1.4 var(--font-mono);color:var(--muted)}
+.facts b{display:block;color:var(--fg);font:500 14px/1.4 var(--font-mono)}
+
+/* status panel */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;min-width:0}
+.panel-h{display:flex;justify-content:space-between;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line);font:500 12px/1.3 var(--font-mono);color:var(--muted);flex-wrap:wrap}
+.row{display:grid;grid-template-columns:1fr auto;gap:10px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:center}
+.row:nth-last-child(2){border-bottom:0}
+.row .t{font-weight:600;font-size:15px}
+.row .s{font:400 12px/1.4 var(--font-mono);color:var(--muted)}
+.pill{font:500 12px/1 var(--font-mono);padding:6px 10px;border-radius:99px;white-space:nowrap}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+.pill.warn{background:var(--warn-soft);color:var(--warn)}
+.panel-f{padding:10px 18px;background:var(--bg);font:400 11px/1.4 var(--font-mono);color:var(--muted);border-top:1px solid var(--line)}
+
+/* sections */
+section{padding-block:72px}
+.head{max-width:62ch;margin-bottom:40px}
+.head h2{font-size:clamp(28px,4vw,42px);font-weight:700;margin-top:14px}
+.head p{margin-top:14px;color:var(--muted);font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}
+.card h3{font-size:21px;font-weight:700}
+.card p{margin-top:10px;color:var(--muted);font-size:15px}
+.card ul{margin:14px 0 0;padding:0;list-style:none;font-size:14px}
+.card li{padding:7px 0;border-top:1px solid var(--line)}
+.card .tag{display:inline-block;margin-bottom:16px;font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:5px;background:var(--accent-soft);color:var(--accent-text)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.step{padding:26px;border-right:1px solid var(--line);min-width:0}
+.step:last-child{border-right:0}
+.step .n{font:500 12px/1 var(--font-mono);color:var(--accent-text)}
+.step h3{font-size:19px;margin-top:12px}
+.step p{margin-top:8px;font-size:14px;color:var(--muted)}
+
+/* credentials */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.creds{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.creds li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+.creds .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:7px}
+.creds b{display:block;font-size:16px}
+.creds span{font-size:14px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.tools span{font:400 13px/1 var(--font-mono);padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--muted)}
+.about p+p{margin-top:14px}
+.about p{color:var(--muted);font-size:17px}
+.about .who{margin-top:22px;font:600 16px/1.4 var(--font-body);color:var(--fg)}
+.about .who small{display:block;font:400 13px/1.5 var(--font-mono);color:var(--muted)}
+
+/* contact */
+.contact{background:var(--band);color:var(--band-fg);border-radius:18px;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.contact h2{font-size:clamp(28px,4vw,44px);font-weight:800}
+.contact p{margin-top:14px;color:var(--band-muted);max-width:46ch}
+.mail{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.mail code{font:500 15px/1.3 var(--font-mono);padding:14px 16px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);overflow-wrap:anywhere;user-select:all}
+.mail button{min-height:46px;padding:0 18px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);font:600 14px var(--font-body);cursor:pointer}
+.where{margin-top:16px;font:400 13px/1.5 var(--font-mono);color:var(--band-muted)}
+.where a{color:var(--band-fg)}
+footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:400 13px/1.5 var(--font-mono);color:var(--muted)}
+
+@media (max-width:900px){
+  .hero,.two,.contact{grid-template-columns:1fr;gap:32px}
+  .grid{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(2){border-right:0}
+  .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media (max-width:600px){
+  .grid,.steps{grid-template-columns:1fr}
+  .step{border-right:0;border-bottom:1px solid var(--line)}
+  .step:last-child{border-bottom:0}
+  .hero{padding-block:32px 48px}
+  section{padding-block:48px}
+}
+@media (prefers-reduced-motion:no-preference){.btn,.mail button{transition:filter .15s,background .15s}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="#top" aria-label="Mwazisi, home">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3162.208 909.22" role="img" aria-hidden="true"><g transform="scale(8.11041548093341) translate(10, 10)"><g transform="matrix(1.151315789473684,0,0,1.151315789473684,-11.51315789473684,-11.51315789473684)" fill="#ff7f50"><path d="M50,10H10v40c0,22.09,17.91,40,40,40h40V50C90,27.91,72.09,10,50,10z M83.333,83.333H50  c-18.379,0-33.333-14.954-33.333-33.333V16.667H50c18.379,0,33.333,14.955,33.333,33.333V83.333z"/><path d="M50,23.333c-14.727,0-26.667,11.94-26.667,26.667S35.273,76.667,50,76.667S76.667,64.727,76.667,50S64.727,23.333,50,23.333  z M50,70c-11.048,0-20-8.955-20-20s8.952-20,20-20c11.045,0,20,8.955,20,20S61.045,70,50,70z"/><path d="M50,36.667c-7.363,0-13.333,5.97-13.333,13.333S42.637,63.333,50,63.333S63.333,57.363,63.333,50S57.363,36.667,50,36.667z   M50,56.667c-3.682,0-6.667-2.985-6.667-6.667s2.985-6.667,6.667-6.667s6.667,2.985,6.667,6.667S53.682,56.667,50,56.667z"/></g><g transform="matrix(3.3046480499309276,0,0,3.3046480499309276,108.03442375828398,2.63476198618665)" fill="currentColor"><path d="M16.3 6 l0 14 l-3.32 0 l0 -6.76 l-2.86 6.76 l-2.78 0 l-2.82 -6.72 l0 6.72 l-3.32 0 l0 -14 l3.18 0 l4.38 9.72 l4.36 -9.72 l3.18 0 z M32.94 9.56 l3.14 0 l-3.72 10.44 l-3.04 0 l-2.28 -6.5 l-2.28 6.5 l-3.04 0 l-3.72 -10.44 l3.14 0 l2.14 6.68 l2.38 -6.68 l2.76 0 l2.38 6.68 z M45.08 9.6 l3.16 0 l0 10.4 l-3.16 0 l0 -1.04 c-0.14 0.36 -1.08 1.24 -2.68 1.24 c-2.38 0 -5.12 -1.7 -5.12 -5.42 c0 -3.58 2.74 -5.36 5.12 -5.36 c1.6 0 2.54 0.92 2.68 1.14 l0 -0.96 z M42.86 17.42 c1.3 0 2.36 -0.9 2.36 -2.64 c0 -1.68 -1.06 -2.58 -2.36 -2.58 c-1.36 0 -2.52 0.92 -2.52 2.58 c0 1.72 1.16 2.64 2.52 2.64 z M59.8 9.6 l-5 7.64 l4.66 0 l0 2.76 l-9.7 0 l5 -7.64 l-4.54 0 l0 -2.76 l9.58 0 z M64.48 5.86 l0 2.66 l-3.16 0 l0 -2.66 l3.16 0 z M64.48 9.6 l0 10.4 l-3.16 0 l0 -10.4 l3.16 0 z M71.46 12.88 c-0.28 -0.72 -0.7 -0.96 -1.16 -0.96 c-0.42 0 -0.84 0.24 -0.84 0.64 c0 0.38 0.24 0.6 0.7 0.76 l1.32 0.46 c1.48 0.54 2.98 1.08 2.98 3.16 c0 2.1 -2.1 3.3 -4.26 3.3 c-1.94 0 -3.76 -1.14 -4.2 -2.96 l2.48 -0.78 c0.26 0.58 0.72 1.24 1.72 1.24 c0.68 0 1.12 -0.44 1.12 -0.84 c0 -0.2 -0.16 -0.46 -0.66 -0.66 l-1.22 -0.44 c-2.08 -0.76 -3.06 -1.82 -3.06 -3.3 c0 -1.94 1.8 -3.08 3.78 -3.08 c2.02 0 3.36 1.1 3.96 2.76 z M79.24 5.86 l0 2.66 l-3.16 0 l0 -2.66 l3.16 0 z M79.24 9.6 l0 10.4 l-3.16 0 l0 -10.4 l3.16 0 z"/></g></g></svg>
+      <span class="sr">Mwazisi Consulting</span>
+    </a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">How we work</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero" id="top">
+    <div>
+      <span class="eyebrow">IT consultancy and managed services, Lusaka</span>
+      <h1>IT support that keeps your <em>business running</em>.</h1>
+      <p class="lede">Mwazisi Consulting looks after the computers, email, backups and data of Zambian organisations, so your team can get on with its work. We also help you meet your obligations under the Data Protection Act.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Talk to us</a>
+        <a class="btn ghost" href="#services">See services</a>
+      </div>
+      <div class="facts">
+        <div><b>Lusaka, Zambia</b>On-site and remote</div>
+        <div><b>Licensed</b>Data Processor, DPA</div>
+        <div><b>ICTAZ</b>Member</div>
+      </div>
+    </div>
+
+    <aside class="panel" aria-label="Example of a monthly service report">
+      <div class="panel-h"><span>MONTHLY SERVICE REPORT</span><span>Example client</span></div>
+      <div class="row"><div><div class="t">Devices monitored</div><div class="s">Patch status, disk, antivirus</div></div><span class="pill ok">All healthy</span></div>
+      <div class="row"><div><div class="t">Backups</div><div class="s">Daily, restore test each quarter</div></div><span class="pill ok">Verified</span></div>
+      <div class="row"><div><div class="t">Microsoft 365 accounts</div><div class="s">Licences, MFA, leavers removed</div></div><span class="pill ok">Reviewed</span></div>
+      <div class="row"><div><div class="t">Open support tickets</div><div class="s">Logged, prioritised, tracked</div></div><span class="pill warn">2 in progress</span></div>
+      <div class="panel-f">Illustrative layout of what clients receive. Not real client data.</div>
+    </aside>
+  </header>
+
+  <section id="services">
+    <div class="head">
+      <span class="eyebrow">Services</span>
+      <h2>Practical IT, from setup to ongoing care.</h2>
+      <p>Pick one service or have us run your whole IT environment on a monthly retainer.</p>
+    </div>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Retainer</span>
+        <h3>Managed IT support</h3>
+        <p>Remote monitoring, patching, helpdesk and regular check-ins for a fixed monthly fee.</p>
+        <ul><li>Helpdesk for your staff</li><li>Device and server monitoring</li><li>Monthly service report</li></ul>
+      </article>
+      <article class="card">
+        <span class="tag">Cloud</span>
+        <h3>Microsoft 365 setup and support</h3>
+        <p>Tenant setup, users, email, OneDrive and backup, with a clean handover to your team. NGO registration with Microsoft supported.</p>
+        <ul><li>User and licence administration</li><li>Email and file migration</li><li>Staff onboarding guides</li></ul>
+      </article>
+      <article class="card">
+        <span class="tag">Compliance</span>
+        <h3>Data protection</h3>
+        <p>We help organisations understand and meet their duties under the Data Protection Act, as a licensed Data Processor.</p>
+        <ul><li>Data and risk assessment</li><li>Policies and records</li><li>Staff awareness</li></ul>
+      </article>
+      <article class="card">
+        <span class="tag">Resilience</span>
+        <h3>Backup and recovery</h3>
+        <p>Local and cloud backup that is tested, so you know your files come back when you need them.</p>
+        <ul><li>Backup design and setup</li><li>Scheduled restore tests</li><li>Recovery plan</li></ul>
+      </article>
+      <article class="card">
+        <span class="tag">Process</span>
+        <h3>Workflow documentation</h3>
+        <p>We map how work moves through your organisation and write it down, so systems can be improved or digitised.</p>
+        <ul><li>Process mapping</li><li>Clear written procedures</li><li>Recommendations for tooling</li></ul>
+      </article>
+      <article class="card">
+        <span class="tag">Projects</span>
+        <h3>Systems and digital tools</h3>
+        <p>Surveys, data collection and custom platforms for programmes that need reliable data from the field.</p>
+        <ul><li>Requirements and design</li><li>Build and rollout</li><li>Training and support</li></ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="head">
+      <span class="eyebrow">How we work</span>
+      <h2>Four steps, in this order.</h2>
+      <p>Every engagement starts by understanding what you have and ends with a report you can read.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><span class="n">STEP 1</span><h3>Assess</h3><p>We review your devices, accounts, backups and risks, and agree priorities with you.</p></div>
+      <div class="step"><span class="n">STEP 2</span><h3>Set up</h3><p>We fix the basics: monitoring, patching, backup and access, documented as we go.</p></div>
+      <div class="step"><span class="n">STEP 3</span><h3>Support</h3><p>Your staff get a clear route to help, with issues logged and tracked to closure.</p></div>
+      <div class="step"><span class="n">STEP 4</span><h3>Review</h3><p>A regular report shows what was done, what is open and what to plan for next.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="two">
+      <div class="about">
+        <span class="eyebrow">About</span>
+        <h2 style="font-size:clamp(28px,4vw,42px);font-weight:700;margin:14px 0 18px">A small consultancy with a direct line to the person doing the work.</h2>
+        <p>Mwazisi Consulting is a Lusaka-based IT consultancy and managed services provider. We work with NGOs, development programmes and growing businesses that need dependable IT without a full-time IT department.</p>
+        <p>You deal with the principal consultant, not a call centre.</p>
+        <div class="who">Sam Gondwe<small>Principal Consultant, Mwazisi Consulting</small></div>
+        <div class="tools" aria-label="Tools and platforms">
+          <span>Microsoft 365</span><span>Remote monitoring</span><span>Cloud backup</span><span>Ticketing</span>
+        </div>
+      </div>
+      <ul class="creds">
+        <li><span class="dot"></span><div><b>Licensed Data Processor</b><span>Registered under the Data Protection Act of Zambia.</span></div></li>
+        <li><span class="dot"></span><div><b>ICTAZ member</b><span>Member of the ICT Association of Zambia.</span></div></li>
+        <li><span class="dot"></span><div><b>Based in Lusaka</b><span>On-site visits in Lusaka, remote support across Zambia.</span></div></li>
+        <li><span class="dot"></span><div><b>Clear billing</b><span>Fixed monthly retainers or quoted projects, with itemised invoices.</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:24px">
+    <div class="contact">
+      <div>
+        <h2>Tell us what is slowing your team down.</h2>
+        <p>Send a short note about your organisation and what you need. We reply with next steps and, where it helps, a free first call.</p>
+      </div>
+      <div>
+        <div class="mail">
+          <code id="email">info@mwazisi.com</code>
+          <button type="button" id="copy">Copy email</button>
+        </div>
+        <p class="where">Phone: <a href="tel:+260765628704">076 5628704</a><br>Mwazisi Consulting, Lusaka, Zambia<br><a href="https://www.mwazisi.com">www.mwazisi.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Mwazisi Consulting</span>
+    <span>IT consultancy and managed services, Lusaka</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('copy'),e=document.getElementById('email');
+  b.addEventListener('click',function(){
+    function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy email'},1800)}
+    function sel(){var r=document.createRange();r.selectNodeContents(e);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected, press copy';setTimeout(function(){b.textContent='Copy email'},2500)}
+    try{navigator.clipboard.writeText(e.textContent).then(done,sel)}catch(x){sel()}
+  });
+})();
+</script>
+
+</body>
+</html>
