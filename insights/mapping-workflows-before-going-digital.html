@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapping workflows before going digital | Mwazisi Consulting</title>
+<meta name="description" content="How we mapped the workflows of a local authority's new digital systems before rollout: the method, what we delivered, and lessons for any organisation digitising its services.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='5 5 90 90'%3E%3Crect x='5' y='5' width='90' height='90' fill='%23bde4f4'/%3E%3Cg fill='%23ff7f50'%3E%3Cpath d='M50,10H10v40c0,22.09,17.91,40,40,40h40V50C90,27.91,72.09,10,50,10z M83.333,83.333H50c-18.379,0-33.333-14.954-33.333-33.333V16.667H50c18.379,0,33.333,14.955,33.333,33.333V83.333z'/%3E%3Cpath d='M50,23.333c-14.727,0-26.667,11.94-26.667,26.667S35.273,76.667,50,76.667S76.667,64.727,76.667,50S64.727,23.333,50,23.333z M50,70c-11.048,0-20-8.955-20-20s8.952-20,20-20c11.045,0,20,8.955,20,20S61.045,70,50,70z'/%3E%3Cpath d='M50,36.667c-7.363,0-13.333,5.97-13.333,13.333S42.637,63.333,50,63.333S63.333,57.363,63.333,50S57.363,36.667,50,36.667z M50,56.667c-3.682,0-6.667-2.985-6.667-6.667s2.985-6.667,6.667-6.667s6.667,2.985,6.667,6.667S53.682,56.667,50,56.667z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="insights.css">
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Main">
+    <a class="brand" href="../" aria-label="Mwazisi, home">
+      <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3162.208 909.22" role="img" aria-hidden="true"><g transform="scale(8.11041548093341) translate(10, 10)"><g transform="matrix(1.151315789473684,0,0,1.151315789473684,-11.51315789473684,-11.51315789473684)" fill="#ff7f50"><path d="M50,10H10v40c0,22.09,17.91,40,40,40h40V50C90,27.91,72.09,10,50,10z M83.333,83.333H50  c-18.379,0-33.333-14.954-33.333-33.333V16.667H50c18.379,0,33.333,14.955,33.333,33.333V83.333z"/><path d="M50,23.333c-14.727,0-26.667,11.94-26.667,26.667S35.273,76.667,50,76.667S76.667,64.727,76.667,50S64.727,23.333,50,23.333  z M50,70c-11.048,0-20-8.955-20-20s8.952-20,20-20c11.045,0,20,8.955,20,20S61.045,70,50,70z"/><path d="M50,36.667c-7.363,0-13.333,5.97-13.333,13.333S42.637,63.333,50,63.333S63.333,57.363,63.333,50S57.363,36.667,50,36.667z   M50,56.667c-3.682,0-6.667-2.985-6.667-6.667s2.985-6.667,6.667-6.667s6.667,2.985,6.667,6.667S53.682,56.667,50,56.667z"/></g><g transform="matrix(3.3046480499309276,0,0,3.3046480499309276,108.03442375828398,2.63476198618665)" fill="currentColor"><path d="M16.3 6 l0 14 l-3.32 0 l0 -6.76 l-2.86 6.76 l-2.78 0 l-2.82 -6.72 l0 6.72 l-3.32 0 l0 -14 l3.18 0 l4.38 9.72 l4.36 -9.72 l3.18 0 z M32.94 9.56 l3.14 0 l-3.72 10.44 l-3.04 0 l-2.28 -6.5 l-2.28 6.5 l-3.04 0 l-3.72 -10.44 l3.14 0 l2.14 6.68 l2.38 -6.68 l2.76 0 l2.38 6.68 z M45.08 9.6 l3.16 0 l0 10.4 l-3.16 0 l0 -1.04 c-0.14 0.36 -1.08 1.24 -2.68 1.24 c-2.38 0 -5.12 -1.7 -5.12 -5.42 c0 -3.58 2.74 -5.36 5.12 -5.36 c1.6 0 2.54 0.92 2.68 1.14 l0 -0.96 z M42.86 17.42 c1.3 0 2.36 -0.9 2.36 -2.64 c0 -1.68 -1.06 -2.58 -2.36 -2.58 c-1.36 0 -2.52 0.92 -2.52 2.58 c0 1.72 1.16 2.64 2.52 2.64 z M59.8 9.6 l-5 7.64 l4.66 0 l0 2.76 l-9.7 0 l5 -7.64 l-4.54 0 l0 -2.76 l9.58 0 z M64.48 5.86 l0 2.66 l-3.16 0 l0 -2.66 l3.16 0 z M64.48 9.6 l0 10.4 l-3.16 0 l0 -10.4 l3.16 0 z M71.46 12.88 c-0.28 -0.72 -0.7 -0.96 -1.16 -0.96 c-0.42 0 -0.84 0.24 -0.84 0.64 c0 0.38 0.24 0.6 0.7 0.76 l1.32 0.46 c1.48 0.54 2.98 1.08 2.98 3.16 c0 2.1 -2.1 3.3 -4.26 3.3 c-1.94 0 -3.76 -1.14 -4.2 -2.96 l2.48 -0.78 c0.26 0.58 0.72 1.24 1.72 1.24 c0.68 0 1.12 -0.44 1.12 -0.84 c0 -0.2 -0.16 -0.46 -0.66 -0.66 l-1.22 -0.44 c-2.08 -0.76 -3.06 -1.82 -3.06 -3.3 c0 -1.94 1.8 -3.08 3.78 -3.08 c2.02 0 3.36 1.1 3.96 2.76 z M79.24 5.86 l0 2.66 l-3.16 0 l0 -2.66 l3.16 0 z M79.24 9.6 l0 10.4 l-3.16 0 l0 -10.4 l3.16 0 z"/></g></g></svg>
+      <span class="sr">Mwazisi Consulting</span>
+    </a>
+    <ul>
+      <li><a href="../#services">Services</a></li>
+      <li><a href="../#process">How we work</a></li>
+      <li><a href="./" aria-current="page">Insights</a></li>
+      <li><a href="../#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <a class="back" href="./">← All insights</a>
+    <header>
+      <span class="eyebrow">Case study · Workflow documentation</span>
+      <h1>Mapping workflows before going digital</h1>
+      <p class="standfirst">A new system only helps if everyone agrees how the work should flow through it. Here is how we mapped the workflows of a local authority's new digital services before they went live.</p>
+      <p class="meta">Sam Gondwe, Principal Consultant · October 2026 · 3 min read</p>
+    </header>
+
+    <p>A Zambian local authority was preparing to launch two modules of a new digital management system: one for collecting revenue from residents and businesses, and one for managing applications to a community development fund, such as bursaries and local projects. The council also planned a service centre, in person and online, to help residents use the new services.</p>
+    <p>Before going live, the council and its development partner wanted every step written down and agreed: who does what, in which order, inside and outside the system. We were engaged to map those workflows and the system design behind them.</p>
+
+    <h2>Why map before you launch?</h2>
+    <p>Digital systems tend to be built from manuals and specifications, while the real work happens at a front desk and in back offices. When the two don't match, staff build workarounds, residents get conflicting answers and the system takes the blame. Mapping first brings those gaps to the surface while they are still cheap to fix.</p>
+
+    <h2>How the work ran</h2>
+    <ol class="timeline">
+      <li>
+        <span class="n">1</span>
+        <div><strong>Desk review.</strong> We read the system manuals and existing process descriptions to build a first draft of each workflow.</div>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <div><strong>Inception with the developers.</strong> We agreed what information was needed, and how any gaps or improvements we found would be passed back to the development team.</div>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <div><strong>Sessions with each department.</strong> Short virtual meetings with the teams who own each service checked the drafts against how the work is actually done.</div>
+      </li>
+      <li>
+        <span class="n">4</span>
+        <div><strong>On-site workshop.</strong> Management, front-desk staff and the developers worked through the revenue workflows together until they reached a shared understanding.</div>
+      </li>
+      <li>
+        <span class="n">5</span>
+        <div><strong>Online workboard.</strong> We put the draft workflows on a shared online whiteboard so staff could comment in their own time, not only in meetings.</div>
+      </li>
+      <li>
+        <span class="n">6</span>
+        <div><strong>Drafts, feedback and final package.</strong> Each module went through a draft presentation, a round of feedback and a final submission.</div>
+      </li>
+    </ol>
+
+    <h2>What we delivered</h2>
+    <ul>
+      <li><strong>Workflow diagrams</strong> for each service, showing each step and who is responsible for it, from the resident's first contact to the final decision or payment.</li>
+      <li><strong>Short written descriptions</strong> alongside each diagram, in plain language that staff can use for training.</li>
+      <li><strong>System design drafts</strong> showing how the modules, users and data fit together, prepared with the developer.</li>
+      <li><strong>Infographics</strong> summarising the main workflows on a page each, for staff and management.</li>
+      <li><strong>Recommendations</strong> on aligning the workflows with the planned service centre, so residents get the same answer at the counter and online.</li>
+    </ul>
+
+    <div class="note">
+      <p><strong>A small example.</strong> Mapping showed that one step in a fund application, an assessment of the applicant's circumstances, applied only to bursaries, not to every application type. Writing it down meant the system could show that step only where it belonged, rather than asking every applicant for it.</p>
+    </div>
+
+    <h2>Lessons for any organisation going digital</h2>
+    <ul>
+      <li><strong>Map the work, not the software.</strong> Start with how a request really moves through your organisation, then check the system against it.</li>
+      <li><strong>Include the front desk.</strong> The people who deal with the public know the exceptions and questions a manual never covers.</li>
+      <li><strong>Separate front office and back office.</strong> Showing which steps the customer sees and which happen behind the scenes makes responsibilities and hand-offs clear.</li>
+      <li><strong>Keep descriptions short.</strong> One diagram and a few plain sentences per service will be used; a long manual won't.</li>
+      <li><strong>Give people more than one way to comment.</strong> A shared online board gathers input from staff who stay quiet in workshops.</li>
+      <li><strong>Plan support for launch.</strong> A help desk or service centre in the first months turns early confusion into feedback instead of complaints.</li>
+    </ul>
+
+    <section class="cta" aria-label="Contact">
+      <h2>Planning a new system or digitising a process?</h2>
+      <p>We map how your work flows today, write it down clearly and help you shape the system around it, before you go live.</p>
+      <a class="btn" href="../#contact">Talk to us</a>
+    </section>
+  </article>
+
+  <footer>
+    <span>© 2026 Mwazisi Consulting</span>
+    <span><a href="mailto:info@mwazisi.com">info@mwazisi.com</a> · 076 5628704</span>
+  </footer>
+</div>
+</body>
+</html>

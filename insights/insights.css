@@ -74,6 +74,12 @@ figcaption{margin-top:14px;font:400 13px/1.5 var(--font-mono);color:var(--muted)
 .d-text.strong{font-weight:600}
 .d-cap{fill:var(--muted);font:400 13px var(--font-mono)}
 
+/* numbered timeline */
+.timeline{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:0}
+.timeline li{display:grid;grid-template-columns:36px 1fr;gap:14px;margin:0;padding:14px 0;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:0}
+.timeline .n{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--accent-soft);color:var(--accent-text);font:600 14px/1 var(--font-mono)}
+
 /* tables */
 .table-wrap{margin:0 0 18px;overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
 table{width:100%;min-width:440px;border-collapse:collapse;font-size:15px;line-height:1.5}
