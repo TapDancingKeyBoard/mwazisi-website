@@ -87,6 +87,11 @@ section{padding-block:72px}
 .card p{margin-top:10px;color:var(--muted);font-size:15px}
 .card ul{margin:14px 0 0;padding:0;list-style:none;font-size:14px}
 .card li{padding:7px 0;border-top:1px solid var(--line)}
+.insight{display:block;text-decoration:none}
+.insight:hover{border-color:var(--accent)}
+.insight .more{display:inline-block;margin-top:16px;font:500 13px/1 var(--font-mono);color:var(--accent-text)}
+#insights .all{margin-top:20px;font:500 14px/1 var(--font-mono)}
+#insights .all a{color:var(--accent-text)}
 .card .tag{display:inline-block;margin-bottom:16px;font:500 11px/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;padding:6px 9px;border-radius:5px;background:var(--accent-soft);color:var(--accent-text)}
 
 /* process */
@@ -151,6 +156,7 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
       <li><a href="#services">Services</a></li>
       <li><a href="#process">How we work</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="insights/">Insights</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -260,6 +266,23 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
         <li><span class="dot"></span><div><b>Clear billing</b><span>Fixed monthly retainers or quoted projects, with itemised invoices.</span></div></li>
       </ul>
     </div>
+  </section>
+
+  <section id="insights">
+    <div class="head">
+      <span class="eyebrow">Insights</span>
+      <h2>Notes from the work.</h2>
+      <p>Case studies and practical advice from our projects, with client details left out.</p>
+    </div>
+    <div class="grid">
+      <a class="card insight" href="insights/ngo-managed-it-support.html">
+        <span class="tag">Case study</span>
+        <h3>Nine months of managed IT support for an NGO country office</h3>
+        <p>What a monthly IT retainer actually covers, from laptop rebuilds to choosing an internet provider.</p>
+        <span class="more">Read the case study →</span>
+      </a>
+    </div>
+    <p class="all"><a href="insights/">All insights →</a></p>
   </section>
 
   <section id="contact" style="padding-top:24px">
