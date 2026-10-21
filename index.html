@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
-/* Layout: wide editorial hero with an illustrative service-status panel, then a services grid, a true four-step process, credentials, and a contact band. */
+/* Layout: full-width illustrated hero, then a sample monthly report, then a services grid, a true four-step process, credentials, and a contact band. */
 :root{
   --bg:#F5F6F7; --surface:#FFFFFF; --fg:#14181F; --muted:#586070; --line:#DCE0E5;
   --accent:#E87722; --accent-ink:#1A0E03; --accent-text:#B24F0B; --accent-soft:#FDEBDB;
@@ -33,7 +33,7 @@
   --band:#0A0D11; --band-fg:#F1F3F5; --band-muted:#8F98A5; color-scheme:dark}
 
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 var(--font-body);
+body{margin:0;overflow-x:clip;background:var(--bg);color:var(--fg);font:16px/1.6 var(--font-body);
   padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .wrap{max-width:1120px;margin:0 auto}
 h1,h2,h3{font-family:var(--font-display);margin:0;text-wrap:balance;line-height:1.1;letter-spacing:-.02em}
@@ -52,10 +52,22 @@ nav ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
 nav ul a:hover{color:var(--fg)}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;padding-block:56px 72px}
+/* full-width illustrated background (assets/hero-lusaka), darkened on the text side */
+.hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:clamp(560px,78vh,760px);padding-block:72px 80px;color:#F1F3F5}
+.hero > div{max-width:640px}
+.hero::before,.hero::after{content:"";position:absolute;top:0;bottom:0;left:50%;width:100vw;margin-left:-50vw}
+.hero::before{z-index:-2;background:#14181F url("assets/hero-lusaka.jpg") center/cover no-repeat;background-image:image-set(url("assets/hero-lusaka.webp") type("image/webp"),url("assets/hero-lusaka.jpg") type("image/jpeg"))}
+.hero::after{z-index:-1;background:linear-gradient(90deg,rgba(15,19,24,.88) 0%,rgba(15,19,24,.68) 45%,rgba(15,19,24,.22) 100%)}
+.hero .eyebrow{color:#F59A52}
 .hero h1{font-size:clamp(38px,6vw,68px);font-weight:800;margin-top:18px}
 .hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--accent) 62%,var(--accent) 92%,transparent 92%)}
-.hero .lede{margin-top:22px;font-size:18px;color:var(--muted);max-width:52ch}
+.hero .lede{margin-top:22px;font-size:18px;color:#D5DAE1;max-width:52ch}
+.hero .btn.ghost{border-color:rgba(241,243,245,.8);color:#F1F3F5}
+.hero .btn.ghost:hover{background:rgba(255,255,255,.12)}
+.hero .facts{border-top-color:rgba(255,255,255,.22);color:#C9CFD8}
+.hero .facts b{color:#F1F3F5}
+.report{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.report .head{margin-bottom:0}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 .btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:8px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--fg)}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
@@ -129,7 +141,9 @@ section{padding-block:72px}
 footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:400 13px/1.5 var(--font-mono);color:var(--muted)}
 
 @media (max-width:900px){
-  .hero,.two,.contact{grid-template-columns:1fr;gap:32px}
+  .report,.two,.contact{grid-template-columns:1fr;gap:32px}
+  .hero::before{background-position:70% center}
+  .hero::after{background:linear-gradient(180deg,rgba(15,19,24,.86) 0%,rgba(15,19,24,.74) 100%)}
   .grid{grid-template-columns:1fr 1fr}
   .steps{grid-template-columns:1fr 1fr}
   .step:nth-child(2){border-right:0}
@@ -139,7 +153,8 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
   .grid,.steps{grid-template-columns:1fr}
   .step{border-right:0;border-bottom:1px solid var(--line)}
   .step:last-child{border-bottom:0}
-  .hero{padding-block:32px 48px}
+  .hero{min-height:0;padding-block:48px 56px}
+  .hero::before{background-image:url("assets/hero-lusaka.jpg");background-image:image-set(url("assets/hero-lusaka-800.webp") type("image/webp"),url("assets/hero-lusaka.jpg") type("image/jpeg"))}
   section{padding-block:48px}
 }
 @media (prefers-reduced-motion:no-preference){.btn,.mail button{transition:filter .15s,background .15s}}
@@ -178,7 +193,14 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
         <div><b>ICTAZ</b>Member</div>
       </div>
     </div>
+  </header>
 
+  <section id="report" class="report">
+    <div class="head">
+      <span class="eyebrow">What you get</span>
+      <h2>Every month, a report you can read.</h2>
+      <p>Retainer clients get a short monthly summary: what was done, what is healthy and what still needs attention.</p>
+    </div>
     <aside class="panel" aria-label="Example of a monthly service report">
       <div class="panel-h"><span>MONTHLY SERVICE REPORT</span><span>Example client</span></div>
       <div class="row"><div><div class="t">Devices monitored</div><div class="s">Patch status, disk, antivirus</div></div><span class="pill ok">All healthy</span></div>
@@ -187,7 +209,7 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
       <div class="row"><div><div class="t">Open support tickets</div><div class="s">Logged, prioritised, tracked</div></div><span class="pill warn">2 in progress</span></div>
       <div class="panel-f">Illustrative layout of what clients receive. Not real client data.</div>
     </aside>
-  </header>
+  </section>
 
   <section id="services">
     <div class="head">
