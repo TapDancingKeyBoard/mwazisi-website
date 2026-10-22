@@ -66,6 +66,19 @@ nav ul a:hover{color:var(--fg)}
 .hero .btn.ghost:hover{background:rgba(255,255,255,.12)}
 .hero .facts{border-top-color:rgba(255,255,255,.22);color:#C9CFD8}
 .hero .facts b{color:#F1F3F5}
+/* client logos: grey silhouettes (assets/clients) scrolling in a loop; static row when reduced motion is on */
+.clients{padding-block:40px 8px}
+.clients-title{margin:0 0 22px;text-align:center;font:500 12px/1.4 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.marquee{display:flex;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.track{display:flex;align-items:center;gap:56px;flex:none;margin:0;padding:0 28px;list-style:none;animation:marquee 34s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes marquee{to{transform:translateX(-100%)}}
+.logo-mask{display:block;width:var(--w,150px);height:var(--h,52px);background:var(--muted);-webkit-mask:var(--logo) center/contain no-repeat;mask:var(--logo) center/contain no-repeat}
+@media (prefers-reduced-motion:reduce){
+  .marquee{-webkit-mask-image:none;mask-image:none}
+  .track{animation:none;flex:1;flex-wrap:wrap;justify-content:center;row-gap:24px}
+  .track[aria-hidden]{display:none}
+}
 .report{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .report .head{margin-bottom:0}
 .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
@@ -154,6 +167,8 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
   .step{border-right:0;border-bottom:1px solid var(--line)}
   .step:last-child{border-bottom:0}
   .hero{min-height:0;padding-block:48px 56px}
+  .track{gap:36px;padding:0 18px}
+  .logo-mask{width:calc(var(--w,150px) * .8);height:calc(var(--h,52px) * .85)}
   .hero::before{background-image:url("assets/hero-lusaka.jpg");background-image:image-set(url("assets/hero-lusaka-800.webp") type("image/webp"),url("assets/hero-lusaka.jpg") type("image/jpeg"))}
   section{padding-block:48px}
 }
@@ -194,6 +209,30 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
       </div>
     </div>
   </header>
+
+  <section class="clients" aria-labelledby="clients-title">
+    <p class="clients-title" id="clients-title">Organisations we've worked with</p>
+    <div class="marquee">
+      <ul class="track">
+        <li><span class="logo-mask" role="img" aria-label="Transcend Advisory" style="--logo:url('assets/clients/transcend-advisory.png')"></span></li>
+        <li><span class="logo-mask" role="img" aria-label="Ezer Outsource Ltd" style="--logo:url('assets/clients/ezer-outsource.png');--h:74px"></span></li>
+        <li><span class="logo-mask" role="img" aria-label="Ventura Solutions Zambia Limited" style="--logo:url('assets/clients/ventura-solutions.png')"></span></li>
+        <li><span class="logo-mask" role="img" aria-label="Norwegian Church Aid and DCA, Joint Country Programme Zambia" style="--logo:url('assets/clients/nca-dca.png');--w:200px"></span></li>
+      </ul>
+      <ul class="track" aria-hidden="true">
+        <li><span class="logo-mask" style="--logo:url('assets/clients/transcend-advisory.png')"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/ezer-outsource.png');--h:74px"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/ventura-solutions.png')"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/nca-dca.png');--w:200px"></span></li>
+      </ul>
+      <ul class="track" aria-hidden="true">
+        <li><span class="logo-mask" style="--logo:url('assets/clients/transcend-advisory.png')"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/ezer-outsource.png');--h:74px"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/ventura-solutions.png')"></span></li>
+        <li><span class="logo-mask" style="--logo:url('assets/clients/nca-dca.png');--w:200px"></span></li>
+      </ul>
+    </div>
+  </section>
 
   <section id="report" class="report">
     <div class="head">
