@@ -106,8 +106,11 @@ tbody th{font-weight:600;width:28%}
 .post p{margin:10px 0 0;color:var(--muted);font-size:15px}
 .post .more{display:inline-block;margin-top:16px;font:500 13px/1 var(--font-mono);color:var(--accent-text)}
 
-footer{padding-block:36px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font:400 13px/1.5 var(--font-mono);color:var(--muted)}
+footer{padding-block:36px 28px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;font:400 13px/1.5 var(--font-mono);color:var(--muted)}
 footer a{color:var(--muted)}
+footer .social{list-style:none;margin:0;padding:0;display:flex;gap:10px}
+footer .social a{display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;color:var(--muted)}
+footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
 
 @media (max-width:600px){
   .bar{grid-template-columns:1fr;gap:6px}
