@@ -130,6 +130,10 @@ section{padding-block:72px}
 /* credentials */
 .two{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .creds{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.regs{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);display:flex;align-items:center;gap:20px 32px;flex-wrap:wrap}
+.regs-label{font:500 12px/1.4 var(--font-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.regs-logos{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:32px}
+.regs .logo-mask{width:var(--w);height:var(--h)}
 .creds li{display:grid;grid-template-columns:auto 1fr;gap:14px;padding:18px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
 .creds .dot{width:10px;height:10px;border-radius:50%;background:var(--accent);margin-top:7px}
 .creds b{display:block;font-size:16px}
@@ -322,12 +326,21 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
           <span>Microsoft 365</span><span>Remote monitoring</span><span>Cloud backup</span><span>Ticketing</span>
         </div>
       </div>
+      <div>
       <ul class="creds">
         <li><span class="dot"></span><div><b>Licensed Data Processor</b><span>Registered under the Data Protection Act of Zambia.</span></div></li>
         <li><span class="dot"></span><div><b>ICTAZ member</b><span>Member of the ICT Association of Zambia.</span></div></li>
         <li><span class="dot"></span><div><b>Based in Lusaka</b><span>On-site visits in Lusaka, remote support across Zambia.</span></div></li>
         <li><span class="dot"></span><div><b>Clear billing</b><span>Fixed monthly retainers or quoted projects, with itemised invoices.</span></div></li>
       </ul>
+      <div class="regs">
+        <span class="regs-label">Registered with</span>
+        <ul class="regs-logos">
+          <li><span class="logo-mask" role="img" aria-label="PACRA" style="--logo:url('assets/badges/pacra-grey.png');--w:110px;--h:50px"></span></li>
+          <li><span class="logo-mask" role="img" aria-label="Zambia Revenue Authority" style="--logo:url('assets/badges/zra-grey.png');--w:110px;--h:70px"></span></li>
+        </ul>
+      </div>
+      </div>
     </div>
   </section>
 
@@ -372,7 +385,7 @@ footer{padding-block:36px 28px;display:flex;justify-content:space-between;gap:12
           <button type="button" id="copy">Copy email</button>
         </div>
         <p class="where">Phone: <a href="tel:+260765628704">+26076 5628704</a><br>Mwazisi Consulting, Lusaka, Zambia<br><a href="https://www.mwazisi.com">www.mwazisi.com</a></p>
-        <p class="where"><a class="profile" href="Mwazisi-Company-Profile.pdf" download>Download our company profile (PDF, 360 KB)</a></p>
+        <p class="where"><a class="profile" href="Mwazisi-Company-Profile.pdf" download>Download our company profile (PDF, 560 KB)</a></p>
       </div>
     </div>
   </section>
