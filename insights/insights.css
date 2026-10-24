@@ -30,7 +30,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;paddi
 .brand{display:flex;align-items:center;text-decoration:none}
 .logo{height:40px;width:auto;display:block;color:var(--fg)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul{display:flex;gap:6px 22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav ul a{display:inline-block;padding-block:4px;text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
 nav ul a:hover,nav ul a[aria-current]{color:var(--fg)}
 
@@ -119,3 +119,4 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
   article{padding-block:32px 48px}
 }
 @media (prefers-reduced-motion:no-preference){.btn{transition:filter .15s}}
+@media (max-width:600px){nav ul{gap:4px 16px}}

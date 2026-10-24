@@ -217,7 +217,7 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;paddi
 .brand{display:flex;align-items:center;gap:10px;font:800 20px/1 var(--font-display);letter-spacing:-.02em;text-decoration:none}
 .logo{height:40px;width:auto;display:block;color:var(--fg)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+nav ul{display:flex;gap:6px 22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
 nav ul a{text-decoration:none;font-size:14px;font-weight:500;color:var(--muted)}
 nav ul a:hover{color:var(--fg)}
 
@@ -354,6 +354,7 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
   .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
 }
 @media (max-width:600px){
+  nav ul{gap:4px 16px}
   .grid,.steps{grid-template-columns:1fr}
   .step{border-right:0;border-bottom:1px solid var(--line)}
   .step:last-child{border-bottom:0}
@@ -379,6 +380,7 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
       <li><a href="#process">How we work</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="insights/">Insights</a></li>
+      <li><a href="faq/">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
