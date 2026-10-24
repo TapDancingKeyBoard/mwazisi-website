@@ -277,6 +277,13 @@ section{padding-block:72px}
 .head h2{font-size:clamp(28px,4vw,42px);font-weight:700;margin-top:14px}
 .head p{margin-top:14px;color:var(--muted);font-size:17px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card.wide{grid-column:1/-1;display:grid;grid-template-columns:1.1fr 1fr;gap:8px 40px;align-items:start}
+.card.wide{grid-template-rows:auto auto 1fr}
+.card.wide .tag,.card.wide h3,.card.wide p{grid-column:1}
+.card.wide .tag{justify-self:start}
+.card.wide h3,.card.wide p{margin-top:0}
+.card.wide ul{grid-column:2;grid-row:1/span 3;columns:2;column-gap:24px;margin-top:0}
+.card.wide ul li{break-inside:avoid}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:26px;min-width:0}
 .card h3{font-size:21px;font-weight:700}
 .card p{margin-top:10px;color:var(--muted);font-size:15px}
@@ -340,6 +347,8 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
   .hero::before{background-position:70% center}
   .hero::after{background:linear-gradient(180deg,rgba(15,19,24,.86) 0%,rgba(15,19,24,.74) 100%)}
   .grid{grid-template-columns:1fr 1fr}
+  .card.wide{grid-template-columns:1fr}
+  .card.wide ul{grid-column:1;grid-row:auto;columns:1}
   .steps{grid-template-columns:1fr 1fr}
   .step:nth-child(2){border-right:0}
   .step:nth-child(-n+2){border-bottom:1px solid var(--line)}
@@ -442,6 +451,12 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
       <p>Pick one service or have us run your whole IT environment on a monthly retainer.</p>
     </div>
     <div class="grid">
+      <article class="card wide">
+        <span class="tag">New office</span>
+        <h3>New office IT setup</h3>
+        <p>Moving from personal laptops and Gmail to a proper business setup? We plan it, cost it, buy it and install it, then look after it every month.</p>
+        <ul><li>Needs assessment and full budget</li><li>Internet provider comparison</li><li>Laptops, printers and network equipment sourced</li><li>Business email on your own domain</li><li>Office network, Wi-Fi and firewall</li><li>Monitoring, antivirus and patching</li><li>Managed backup and email security</li><li>Handover, staff induction and documentation</li></ul>
+      </article>
       <article class="card">
         <span class="tag">Retainer</span>
         <h3>Managed IT support</h3>
