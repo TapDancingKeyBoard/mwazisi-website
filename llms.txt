@@ -1,0 +1,30 @@
+# Mwazisi Consultancy
+
+> IT consultancy and managed IT services in Lusaka, Zambia. We look after the computers, email, backups and data of NGOs, development programmes, professional firms and growing businesses that need dependable IT without a full-time IT department. Registered with PACRA and ZRA, a licensed Data Processor under Zambia's Data Protection Act, and a member of the ICT Association of Zambia (ICTAZ).
+
+## Services
+- Managed IT support: helpdesk, on-site support in Lusaka and remote support across Zambia, and device maintenance for a fixed monthly fee, with a written log of all work.
+- Microsoft 365 and email: tenant and domain setup, mailbox migration, Teams and SharePoint, licences, MFA, and Microsoft nonprofit registration.
+- Data protection: data and risk assessments, policies and records, and staff awareness under the Data Protection Act No. 3 of 2021.
+- Backup and recovery: local and cloud backup with scheduled restore tests and a written recovery plan.
+- Devices and hardware: diagnostics, repairs, upgrades, rebuilds and laptop supply.
+- Networks and connectivity: Wi-Fi, printers, internet provider liaison and comparisons, office network plans.
+- Workflows and digital tools: process mapping, written procedures and data collection platforms.
+- Websites and digital presence: business websites, hosting, Google Business Profile setup.
+
+## How we work
+Monthly retainers, quoted projects or ad hoc support. Every engagement is led by the Principal Consultant, Sam Gondwe, and clients receive a monthly report of work done.
+
+## Where
+Based in Lusaka, Zambia. On-site visits in Lusaka; remote support across Zambia.
+
+## Contact
+- Website: https://www.mwazisi.com
+- Email: info@mwazisi.com
+- Phone and WhatsApp: +260 76 562 8704
+- LinkedIn: https://www.linkedin.com/company/mwazisi/
+
+## Key pages
+- [Home and services](https://www.mwazisi.com/)
+- [Insights: case studies and guides](https://www.mwazisi.com/insights/)
+- [Company profile (PDF)](https://www.mwazisi.com/Mwazisi-Company-Profile.pdf)
