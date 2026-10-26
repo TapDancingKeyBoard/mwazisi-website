@@ -28,4 +28,5 @@ Based in Lusaka, Zambia. On-site visits in Lusaka; remote support across Zambia.
 - [Home and services](https://www.mwazisi.com/)
 - [Insights: case studies and guides](https://www.mwazisi.com/insights/)
 - [Frequently asked questions](https://www.mwazisi.com/faq/)
+- [Guide: data protection in Zambia](https://www.mwazisi.com/insights/data-protection-in-zambia.html)
 - [Company profile (PDF)](https://www.mwazisi.com/Mwazisi-Company-Profile.pdf)
