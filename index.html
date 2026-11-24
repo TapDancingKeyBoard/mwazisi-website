@@ -330,6 +330,10 @@ section{padding-block:72px}
 .contact p{margin-top:14px;color:var(--band-muted);max-width:46ch}
 .enquire{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;margin-bottom:18px;border-radius:10px;background:var(--accent);color:var(--accent-ink);font:600 16px/1 var(--font-body);text-decoration:none}
 .enquire:hover{filter:brightness(1.08)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.ctas .enquire{margin-bottom:0}
+.book{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:10px;border:1px solid var(--accent);color:var(--band-fg);font:600 16px/1 var(--font-body);text-decoration:none}
+.book:hover{background:rgba(255,255,255,.06)}
 .mail{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 .mail code{font:500 15px/1.3 var(--font-mono);padding:14px 16px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);overflow-wrap:anywhere;user-select:all}
 .mail button{min-height:46px;padding:0 18px;border-radius:8px;border:0;background:var(--accent);color:var(--accent-ink);font:600 14px var(--font-body);cursor:pointer}
@@ -601,7 +605,10 @@ footer .social a:hover{color:var(--accent-text);border-color:var(--accent-text)}
         <p>Fill in our short enquiry form about your organisation and what you need. We reply with next steps and, where it helps, a free first call.</p>
       </div>
       <div>
-        <a class="enquire" href="enquiry/">Send an enquiry</a>
+        <div class="ctas">
+          <a class="enquire" href="enquiry/">Send an enquiry</a>
+          <a class="book" href="https://bookings.cloud.microsoft/book/MwazisiConsultancy@NETORGFT15078902.onmicrosoft.com/" target="_blank" rel="noopener">Book a free call</a>
+        </div>
         <div class="mail">
           <code id="email">info@mwazisi.com</code>
           <button type="button" id="copy">Copy email</button>
